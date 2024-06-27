@@ -4,13 +4,13 @@ This Python function get_files_and_file_counts retrieves all the files in a give
 
 ## Usage
 To use this function, simply call it with the directory you want to analyze and (optionally) the file extensions you want to include:
-
+```
 import os
 from collections import defaultdict
 import pandas as pd
 
 file_paths, num_folders, file_counts_df = get_files_and_file_counts('/path/to/directory', ['.pdf', '.docx'])
-
+```
 This will:
 
 Retrieve all the files in the /path/to/directory directory and its subdirectories that have the .pdf or .docx extensions.
@@ -29,11 +29,11 @@ pd.DataFrame: A DataFrame with the count of files per extension, sorted in desce
 
 ## Example
 Here's an example of how to use the function:
-
+```
 file_paths, num_folders, file_counts_df = get_files_and_file_counts('/path/to/directory', ['.py', '.ipynb'])
 print(file_paths)
 print(f"Number of unique directories: {num_folders}")
 print(file_counts_df)
-
+```
 
 This will print the file paths, the number of unique directories, and the file counts per extension for Python and Jupyter Notebook files in the /path/to/directory directory and its subdirectories.
